@@ -5,6 +5,7 @@ pipeline {
          stage('build customer app code') { 
  steps {
   script {
+        sh 'sudo apt install -y maven'
         sh 'mvn clean install'
     }
   }
